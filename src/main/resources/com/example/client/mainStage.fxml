@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="859.0" style="-fx-background-color: #FFE4C4;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client.MainStageController">
+  <tabs>
+    <Tab fx:id="table2" text="%Table">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="508.0" prefWidth="859.0" style="-fx-background-color: #FFEBCD;">
+               <children>
+                  <TableView fx:id="table" layoutX="-4.0" prefHeight="470.0" prefWidth="877.0" style="-fx-background-color: #FAEBD7;">
+                    <columns>
+                      <TableColumn fx:id="ID" prefWidth="52.80001753568649" text="ID" />
+                      <TableColumn fx:id="routeName" prefWidth="97.59997940063477" text="%routeName" />
+                        <TableColumn fx:id="coordinates" prefWidth="130.4000244140625" text="%Coordinates">
+                           <columns>
+                              <TableColumn prefWidth="75.20001220703125" text="%x" fx:id="xCoordinate" />
+                              <TableColumn fx:id="yCoordinate" prefWidth="75.0" text="%y" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="creationDate" prefWidth="97.59991455078125" text="%creationDate" />
+                        <TableColumn fx:id="locationFrom" prefWidth="128.00006103515625" text="%locationFrom">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="%x" fx:id="xFrom" />
+                              <TableColumn fx:id="yFrom" prefWidth="75.0" text="%y" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="locationTo" prefWidth="75.0" text="%locationTo">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="%x" fx:id="xTo" />
+                              <TableColumn fx:id="yTo" prefWidth="75.0" text="%y" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="distance" prefWidth="75.199951171875" text="%distance" />
+                        <TableColumn fx:id="creator" minWidth="0.0" prefWidth="81.5999755859375" text="%creator" />
+                    </columns>
+                  </TableView>
+                  <MenuButton fx:id="menuView" layoutY="470.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #F5F5DC; -fx-border-color: BLACK;" text="%view">
+                    <items>
+                      <MenuItem fx:id="languageChanger" mnemonicParsing="false" onAction="#changeLanguage" text="%changeLanguage" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton fx:id="menuEdit" layoutX="1.0" layoutY="497.0" mnemonicParsing="false" onAction="#remove" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #F5F5DC; -fx-border-color: black;" text="%editMenu">
+                    <items>
+                      <MenuItem fx:id="add" mnemonicParsing="false" onAction="#add" text="%add" />
+                        <MenuItem fx:id="remove" mnemonicParsing="false" onAction="#remove" text="%remove" />
+                      <MenuItem fx:id="clear" mnemonicParsing="false" onAction="#clear" text="%clear" />
+                        <MenuItem fx:id="removeByDistance" mnemonicParsing="false" onAction="#removeByDistance" text="%removebyDistance" />
+                        <MenuItem fx:id="removeLast" mnemonicParsing="false" onAction="#removeLast" text="%removeLast" />
+                        <MenuItem fx:id="removeLover" mnemonicParsing="false" onAction="#removeLover" text="%removeLover" />
+                        <MenuItem fx:id="updateC" mnemonicParsing="false" onAction="#updateCommand" text="%updateC" />
+                    </items>
+                  </MenuButton>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="map" onSelectionChanged="#draw" text="%Map">
+      <content>
+        <AnchorPane fx:id="mapPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

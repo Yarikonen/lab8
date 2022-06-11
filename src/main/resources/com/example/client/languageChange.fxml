@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="138.0" prefWidth="191.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client.LanguageChange">
+   <children>
+      <Button fx:id="lButton" layoutY="27.0" mnemonicParsing="false" onAction="#changeLanguageButton" prefHeight="26.0" prefWidth="191.0" text="%changeLanguage" />
+      <ChoiceBox fx:id="choiceBox" layoutY="1.0" prefHeight="26.0" prefWidth="191.0" />
+   </children>
+</AnchorPane>
